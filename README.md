@@ -3,10 +3,10 @@
 
 This repository gives the code for D'sciencelabs online homepage. You can visit at:
 
-[yan-holtz.com](https://www.yan-holtz.com)
+[D'sciencelabs Homepage](https://dsciencelabs.github.io/web/index.html)
 
 Note that by blog is linked to this, available at:
 
-[yan-holtz.com/blog](https://www.yan-holtz.com/blog)
+[D'sciencelabs blog](https://dsciencelabs.github.io/web/blog.html)
 
 
