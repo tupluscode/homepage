@@ -1,6 +1,6 @@
 ---
 mydisqus: "dataToViz"
-mytitle: "Announcing \nData To Viz"
+mytitle: "Announcing \n Data To Viz"
 mydescription: "July 2018 - 6 minutes read"
 myimage: "datatoviz_logo.png"
 output:
@@ -81,7 +81,7 @@ The website is tightly linked with the [R graph gallery](https://www.r-graph-gal
 
 From Data to Viz is still in beta version, and a lot remains to be done. The [caveat gallery](http://www.data-to-viz.com/caveats.html) is incomplete and some chart types are missing. Also, a few inaccuracies may be present in the decision tree. Last but not least the English is horrible but this is not likely to change unfortunately, I apologize for that.
 
-If you find any mistake or potential improvement, please fill an issue on [GitHub](https://github.com/holtzy/data_to_viz), contact me at [Yan.holtz.data@gmail.com](Yan.holtz.data@gmail.com) or on [twitter](https://twitter.com/R_Graph_Gallery), or leave a comment below. Any feedback will be very welcome!
+
 
 <br>
 
