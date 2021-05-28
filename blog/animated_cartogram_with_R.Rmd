@@ -1,0 +1,95 @@
+---
+mydisqus: "animated_cartogram_with_R"
+mytitle: "Map: a smooth transition to cartogram with R"
+mydescription: "January 2018 - 9 minutes read"
+myimage: "cartogram_logo.png"
+output:
+  html_document:
+      self_contained: false    
+      mathjax: default
+      lib_dir: libs
+      template: template_basic.html
+      theme: "lumen"
+      css: style.css
+      toc: FALSE
+      toc_float: TRUE
+      toc_depth: 2
+      number_sections: TRUE
+      df_print: "paged"
+      includes: 
+        after_body: footer.html
+---
+
+<br><br><br>
+
+<div class="mycontent">
+
+This post describes how to make a smooth transition `.gif` between a classic [choropleth map](https://www.r-graph-gallery.com/chloropleth-map/) and a [cartogram](https://www.r-graph-gallery.com/cartogram/).  
+
+It starts by doing a basic map of Africa and then distorts country size using the [cartogram](https://github.com/sjewo/cartogram) library. [Ggplot2](https://www.r-graph-gallery.com/portfolio/ggplot2-package/) is then used to make a nice choropleth version. Finally the [tweenr](https://github.com/thomasp85/tweenr) and the [gganimate](https://github.com/dgrtwo/gganimate) libraries build a smooth transition between both maps.  
+
+At the end of this post, you should obtain a `.gif file that looks like this:
+
+<center>![](IMG/animated_carto_africa.gif)</center>
+
+<br>
+
+Before starting, we need a few libraries:
+```{r warning=FALSE, message=FALSE}
+# Load libraries
+library(tidyverse)    # As always
+library(cartogram)    # for the cartogram
+library(ggplot2)      # to realize the plots
+library(broom)        # from geospatial format to data frame
+library(tweenr)       # to create transition dataframe between 2 states
+library(gganimate)    # To realize the animation
+library(maptools)     # world boundaries coordinates
+library(viridis)      # for a nice color palette
+```
+
+
+
+#A basic map of Africa
+***
+
+The [maptools library](https://cran.r-project.org/web/packages/maptools/maptools.pdf) provides all the information we need to draw a map of Africa. All the country boundaries are stored in the `world_simpl` object. Let’s load this object, keep only Africa, and draw a basic representation.
+
+We only need 3 lines of code to start!
+
+```{r warning=FALSE, message=FALSE}
+# Get the shape file of Africa
+data(wrld_simpl)
+afr=wrld_simpl[wrld_simpl$REGION==2,]
+ 
+# A basic representation
+plot(afr)
+```
+
+
+
+
+
+#Compute cartogram boundaries
+***
+The `afr` object is a **spatial object**. Thus it has a `data slot` that gives a few information concerning each region. You can visualise this info typing `afr@data` in our case. You will see that a column called `POP2005` is available, providing the number of inhabitants per country in 2005.  
+
+Using this information we can use the [cartogram library](https://github.com/sjewo/cartogram) to build… a cartogram! Basically, it will distort the shape of every country proportionally to its number of inhabitants. The output is a new geospatial object that we can map like we’ve done before.  
+
+As you can see in the image on the left, Nigeria appears way bigger on this map, since it has a population of about 141M inhabitants!
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
