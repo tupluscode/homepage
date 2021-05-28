@@ -1,5 +1,4 @@
 # DSL Homepage
-==============
 
 This repository gives the code for D'sciencelabs online homepage. You can visit at:
 
