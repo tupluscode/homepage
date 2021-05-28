@@ -34,10 +34,6 @@
 
 
 
-
-
-
-
 <style>
 .mytitle{
   text-transform: uppercase;
@@ -63,7 +59,7 @@
 
 <div>
   <br>
-  <a href="http://www.yan-holtz.com/blog" style="text-align: left; vertical-align: top; margin-left: 5%;">&larr; Yan Holtz's blog</a>
+  <a href="web/blog.html" style="text-align: left; vertical-align: top; margin-left: 5%;">&larr; D'sciencelabs blog</a>
   <center><img src="img/$myimage$"></center>
   <center><p class="mytitle">$mytitle$</p></center>
   <center><p class="mysubtitle">$mydescription$</p></center>
@@ -526,13 +522,13 @@ $body$
         <script>
 
         var disqus_config = function () {
-        this.page.url = www.yan-holtz.com/graph/$mydisqus$.html;  
+        this.page.url = $mydisqus$.html;  
         this.page.identifier = $mydisqus$; 
         };
 
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        s.src = 'https://yan-holtz.disqus.com/embed.js';
+        s.src = 'https://.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
