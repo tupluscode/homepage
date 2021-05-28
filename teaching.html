@@ -412,8 +412,7 @@ function validatePass2(){
   </section>
 
 
-
-<!-- ======================== MAP SECTION ============================ -->
+ <!-- ======================== MAP SECTION ============================ -->
 
     <style>
        /* Set the size of the div element that contains the map */
@@ -434,7 +433,7 @@ function validatePass2(){
         // Styles a map in night mode.
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: {lat: 43.61092, lng: 3.87723},
+          center: {lat: -6.244322123143861, lng: 106.62480028448907},
           styles: [
                     {
                       "elementType": "geometry",
@@ -669,11 +668,11 @@ function validatePass2(){
                     }
                   ]
         });
-      var contentString = '<div id="content" style="font-size: 14px; line-height: 20px">Montpellier, France<br><a href="mailto:yan.holtz.data@gmail.com">yan.holtz.data@gmail.com</a></div>'
+      var contentString = '<div id="content" style="font-size: 14px; line-height: 20px">Tangerang, Indonesia<br><a href="mailto:dsciencelabs@outlook.com">dsciencelabs@outlook.com</a></div>'
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
-      var marker = new google.maps.Marker({position: {lat: 43.61092, lng: 3.52}, map: map})
+      var marker = new google.maps.Marker({position: {lat: -6.244322123143861, lng: 106.62480028448907}, map: map})
       marker.addListener('click', function() {
           infowindow.open(map, marker);
       });
@@ -682,7 +681,6 @@ function validatePass2(){
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&callback=initMap">
     </script>
-
 
 
 
