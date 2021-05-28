@@ -1,7 +1,7 @@
-Homepage
-==========
+# DSL Homepage
+==============
 
-This repository gives the code for my online homepage. You can visit at:
+This repository gives the code for D'sciencelabs online homepage. You can visit at:
 
 [yan-holtz.com](https://www.yan-holtz.com)
 
